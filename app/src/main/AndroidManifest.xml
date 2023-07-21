@@ -43,6 +43,9 @@
         <activity
             android:name="com.zrh.camera.VideoRecordActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zrh.camera.QrcodeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

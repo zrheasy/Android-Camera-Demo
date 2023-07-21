@@ -20,6 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         mBinding.btnCapture.setOnClickListener { requestCapture() }
         mBinding.btnRecord.setOnClickListener { requestVideoRecord() }
+        mBinding.btnQrcode.setOnClickListener { requestQrcode() }
+    }
+
+    private fun requestQrcode() {
+        PermissionUtils.requestPermissions(this, arrayOf(Manifest.permission.CAMERA)) { _, granted ->
+            if (granted) {
+                startActivity(QrcodeActivity::class.java)
+            }
+        }
     }
 
     private fun requestCapture() {
